@@ -97,29 +97,28 @@ Page({
     })
 
   },
-  // onPullDownRefresh() {　　
-  //   console.log('--------下拉刷新-------')　　
-  //   wx.showNavigationBarLoading() //在标题栏中显示加载
-  //   wx.startPullDownRefresh()
-  //   wx.request({
-  //     url: 'https://www.wanandroid.com/article/list/1/json',
-  //     header: {
-  //       'content-type': 'application/json' // 默认值
-  //     },
-  //     success: (res) => {
-  //       console.log(res.data.data.datas)
-  //       this.setData({
-  //         articleList: res.data.data.datas
-  //       })
-
-  //     },
-  //     complete: function() {
-  //       // complete
-  //       wx.hideNavigationBarLoading() //完成停止加载
-  //       wx.stopPullDownRefresh() //停止下拉刷新
-  //     }
-  //   })
-  // },
+  onPullDownRefresh() {　　
+    var that = this
+    console.log('--------下拉刷新-------')　　
+    //显示动画
+    wx.showNavigationBarLoading()
+    wx.request({
+      url: 'https://www.wanandroid.com/article/list/0/json',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: (res) => {
+        console.log(res.data.data.datas)
+        wx.stopPullDownRefresh()
+        //隐藏动画
+        wx.hideNavigationBarLoading()
+        that.setData({
+          articleList: res.data.data.datas,
+          loading: false
+        })
+      }
+    })
+  },
 
   onReachBottom() {
     console.log("上拉加载更多...")
