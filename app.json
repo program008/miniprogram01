@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/user/user",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
@@ -7,6 +8,7 @@
     "pages/navigation/navigation",
     "pages/project/project",
     "pages/webview/webview"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -45,6 +47,12 @@
         "text": "项目",
         "iconPath": "assets/images/icon_project_not_selected.png",
         "selectedIconPath": "assets/images/icon_project_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "assets/images/icon_user_no_selected.png",
+        "selectedIconPath": "assets/images/icon_user_selected.png"
       }
     ]
   }

@@ -1,0 +1,16 @@
+<view class="content">
+  <view class="user">
+    <view class="user-info">
+      <image src="/assets/images/logo.png"></image>
+      <text>{{username}}</text>
+    </view>
+  </view>
+  <view class="collect">
+  <text class="iconfont icon-heart" style='font-size:60rpx;color:#2196f3'></text>
+  <text>我的收藏</text>
+  </view>
+  <view class="about">
+  <text class="iconfont icon-about" style='font-size:60rpx;color:#2196f3'></text>
+  <text>关于我们</text>
+  </view>
+</view>

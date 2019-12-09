@@ -1,0 +1,59 @@
+.user{
+  background-color: #2196f3;
+}
+.content{
+position: absolute;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+}
+.user-info{
+  width: 192rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 120rpx;
+  padding-bottom: 20rpx;
+}
+.user-info image{
+  width: 192rpx;
+  height: 192rpx;
+}
+
+.user-info text{
+  font-size: 1.5em;
+  color:white;
+  width: 192rpx;
+  text-align: center;
+  margin-top: 15rpx;
+}
+
+.collect{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+  background-color: white;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.collect text{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.about{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  background-color: white;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.about text{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
