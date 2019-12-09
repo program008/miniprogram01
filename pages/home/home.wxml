@@ -17,7 +17,7 @@
     </swiper>
   </view>
   <view class="article-loading" wx:if="{{loading}}">
-    <image src="/assets/images/startup_load.gif"></image>
+    <image src="/assets/images/loading_icon.gif"></image>
   </view>
   <view class="article_list">
     <block wx:for="{{articleList}}" wx:key="{{index}}">

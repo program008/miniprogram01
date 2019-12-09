@@ -109,11 +109,13 @@ swiper {
 
 .article-loading {
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 180rpx;
 }
 
 .article-loading image {
-  display: flex;
-  flex-direction: row;
-  margin: auto auto;
-  width: 100%;
+  width: 160rpx;
+  height: 160rpx;
 }
