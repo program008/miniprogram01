@@ -116,6 +116,6 @@ swiper {
 }
 
 .article-loading image {
-  width: 160rpx;
-  height: 160rpx;
+  width: 220rpx;
+  height: 220rpx;
 }
