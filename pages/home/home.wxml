@@ -1,20 +1,20 @@
 <view class="page-body">
   <view class="swiper">
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="change">
       <block wx:for="{{banners}}" wx:key="{{index}}">
         <swiper-item>
           <navigator url="/pages/webview/webview?link= {{item.url}}">
             <view class="banner">
               <image src="{{item.imagePath}}" />
-              <view class="banner_title">
-                <text>{{item.title}}</text>
-                <text class="title_index">{{index % banners.length }}/{{banners.length}}</text>
-              </view>
             </view>
           </navigator>
         </swiper-item>
       </block>
     </swiper>
+    <view class="banner_title" wx:if="{{banners.length != 0}}">
+      <text>{{banners[current].title}}</text>
+      <text class="title_index">{{current}}/{{banners.length}}</text>
+    </view>
   </view>
   <view class="article-loading" wx:if="{{loading}}">
     <image src="/assets/images/startup_load.gif"></image>

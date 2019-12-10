@@ -18,8 +18,15 @@ Page({
     curPage: 0,
     bottomLoading: false,
     loading: false,
+    current:0,
   },
-
+  change:function(e){
+    console.log("e.detail.current：" + e.detail.current)
+    this.setData({
+      current: e.detail.current
+    })
+  }
+  ,
   /**
    * 生命周期函数--监听页面加载
    */
@@ -37,7 +44,8 @@ Page({
       success: (res) => {
         console.log(res.data.data)
         this.setData({
-          banners: res.data.data
+          banners: res.data.data,
+          currentIndex: 0,
         })
       }
     })
