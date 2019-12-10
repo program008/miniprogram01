@@ -65,5 +65,12 @@ Page({
     wx.navigateTo({
       url: '../aboutwe/aboutwe',
     })
+  },
+  login:function(){
+    console.log("打开登录页")
+    wx.navigateTo({
+      url: '../login/login',
+    })
+
   }
 })

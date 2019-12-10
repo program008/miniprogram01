@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    username:"",
+    password:""
   },
 
   /**
@@ -62,5 +63,40 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  login:function(e){
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  register:function(){
+    wx.navigateTo({
+      url: '../register/register',
+    })
+  },
+  clearUsername:function(){
+    console.log("清空用户名")
+    this.setData({
+      username: ""
+    })
+  },
+  clearPassword:function(){
+    console.log("清空密码")
+    this.setData({
+      password: ""
+    })
+  },
+
+  bindUsername:function(e){
+    var value = e.detail.value
+    console.log("输入的用户名：" + value)
+    this.setData({
+      username:value
+    })
+  },
+  bindPassword: function (e) {
+    var value = e.detail.value
+    console.log("输入的密码："+value)
+    this.setData({
+      password: value
+    })
   }
 })

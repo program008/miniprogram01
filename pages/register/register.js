@@ -1,11 +1,13 @@
-// pages/register/register.js
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    username: "",
+    password: "",
+    repassword:""
   },
 
   /**
@@ -62,5 +64,42 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  register: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  clearUsername: function () {
+    console.log("清空用户名")
+    this.setData({
+      username: ""
+    })
+  },
+  clearPassword: function () {
+    console.log("清空密码")
+    this.setData({
+      password: ""
+    })
+  },
+
+  bindUsername: function (e) {
+    var value = e.detail.value
+    console.log("输入的用户名：" + value)
+    this.setData({
+      username: value
+    })
+  },
+  bindPassword: function (e) {
+    var value = e.detail.value
+    console.log("输入的密码：" + value)
+    this.setData({
+      password: value
+    })
+  },
+  bindRePassword: function (e) {
+    var value = e.detail.value
+    console.log("输入的密码：" + value)
+    this.setData({
+      repassword: value
+    })
   }
 })
