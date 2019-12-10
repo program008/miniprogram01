@@ -1,7 +1,4 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "知识体系",
-  "navigationBarBackgroundColor": "#000000",
-  "navigationBarTextStyle": "white",
-  "backgroundTextStyle": "dark"
+  "navigationBarTitleText": "知识体系"
 }

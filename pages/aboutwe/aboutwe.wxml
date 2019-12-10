@@ -1,7 +1,7 @@
 
 <wxs src="../../utils/filter/filter.wxs" module="tools"/>
 <view class="content">
-  <image src="/assets/images/logo2.png" mode="aspectFit"></image>
+  <image src="/assets/images/安卓.png" mode="aspectFit"></image>
   <view class="appname">
     <text>{{appname}}</text>
   </view>

@@ -14,8 +14,8 @@ swiper {
 
 }
 .banner_title{
-  background: #2196f3;
-  padding: 10rpx 20rpx;
+  background: #cccccc;
+  padding: 20rpx 20rpx;
 }
 
 .banner_title text{
