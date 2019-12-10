@@ -9,11 +9,11 @@
       <text>{{username}}</text>
     </view>
   </view>
-  <view class="collect">
+  <view class="collect" bindtap="collectpage">
     <text class="iconfont icon-heart" style='font-size:60rpx;color:#2196f3'></text>
     <text>我的收藏</text>
   </view>
-  <view class="about">
+  <view class="about" bindtap="aboutpage">
     <text class="iconfont icon-about" style='font-size:60rpx;color:#2196f3'></text>
     <text>关于我们</text>
   </view>

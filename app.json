@@ -7,14 +7,19 @@
     "pages/navigation/navigation",
     "pages/project/project",
     "pages/webview/webview",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/collect/collect",
+    "pages/aboutwe/aboutwe"
+    
 
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark"
   },
   "networkTimeout": {
     "request": 20000,

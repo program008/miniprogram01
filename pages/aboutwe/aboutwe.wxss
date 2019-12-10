@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content image {
+  width: 240rpx;
+  height: 240rpx;
+  margin-top: 80rpx;
+}
+
+.appname text {
+  font-size: 48rpx;
+}
+
+.introduce {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}

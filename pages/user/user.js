@@ -52,5 +52,18 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  collectpage:function(){
+    console.log("打开我的收藏页")
+    wx.navigateTo({
+      url: '../collect/collect',
+    })
+  },
+
+  aboutpage:function(){
+    console.log("打开关于我们页")
+    wx.navigateTo({
+      url: '../aboutwe/aboutwe',
+    })
   }
 })
