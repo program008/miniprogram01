@@ -8,10 +8,10 @@ position: absolute;
   height: 100%;
 }
 .user-info{
-  width: 192rpx;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
   padding-top: 120rpx;
   padding-bottom: 20rpx;
 }
@@ -19,12 +19,14 @@ position: absolute;
   width: 192rpx;
   height: 192rpx;
 }
-
+.userinfo-avatar {
+  width: 192rpx;
+  height: 192rpx;
+  border-radius: 50%;
+}
 .user-info text{
   font-size: 1.5em;
   color:white;
-  width: 192rpx;
-  text-align: center;
   margin-top: 15rpx;
 }
 
