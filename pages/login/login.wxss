@@ -35,8 +35,7 @@
 }
 
 .username icon {
-  margin-left: -50rpx;
-  padding-bottom: 15rpx;
+  padding-bottom: 5rpx;
 }
 
 .password {
@@ -59,7 +58,6 @@
 }
 
 .password icon {
-  margin-left: -50rpx;
   padding-bottom: 15rpx;
 }
 

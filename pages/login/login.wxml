@@ -6,13 +6,13 @@
     <view class="username">
       <image src="/assets/images/icon_username.png"></image>
       <input type="text" value="{{username}}" placeholder="请输入用户名" maxlength="20" name="username" bindinput="bindUsername"></input>
-      <icon type="clear" size="30" bindtap="clearUsername"></icon>
+      <icon type="clear" size="20" bindtap="clearUsername" wx:if="{{username != ''}}"></icon>
     </view>
 
     <view class="password">
       <image src="/assets/images/icon_password.png"></image>
-      <input type="number" value="{{password}}" placeholder="请输入密码" maxlength="20" name="password" bindinput="bindPassword"></input>
-      <icon type="clear" size="30" bindtap="clearPassword" ></icon>
+      <input type="number" value="{{password}}" placeholder="请输入密码" maxlength="20" name="password" bindinput="bindPassword" password></input>
+      <icon type="clear" size="20" bindtap="clearPassword" wx:if="{{password != ''}}"></icon>
     </view>
 
     <button class="login" formType="submit">极速登录</button>
