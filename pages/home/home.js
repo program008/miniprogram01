@@ -108,7 +108,8 @@ Page({
       wx.request({
         url: 'https://www.wanandroid.com/article/list/0/json',
         header: {
-          'content-type': 'application/json' // 默认值
+          'content-type': 'application/json', // 默认值
+          'cookie': wx.getStorageSync("sessionid")
         },
         success: (res) => {
           console.log(res.data.data.datas)
@@ -148,11 +149,15 @@ Page({
     console.log("index：" + index)
     var newdata = that.data.articleList
     if (that.data.articleList[index].collect) {
-      console.log("设置选中")
-      that.data.articleList[index].collect = false
-    } else {
       console.log("设置不选中")
+      that.data.articleList[index].collect = false
+      unCollectArticle(that.data.articleList[index].id)
+      that.setData()
+    } else {
+      console.log("设置选中")
       that.data.articleList[index].collect = true
+      collectArticle(that.data.articleList[index].id)
+      that.setData()
     }
     console.log(newdata)
     this.setData({
@@ -168,7 +173,8 @@ Page({
     wx.request({
       url: 'https://www.wanandroid.com/article/list/0/json',
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/json', // 默认值
+        'cookie': wx.getStorageSync("sessionid")
       },
       success: (res) => {
         console.log(res.data.data.datas)
@@ -193,7 +199,8 @@ Page({
     wx.request({
       url: 'https://www.wanandroid.com/article/list/' + that.data.curPage + '/json',
       header: {
-        'content-type': 'application/json' // 默认值
+        'content-type': 'application/json', // 默认值
+        'cookie': wx.getStorageSync("sessionid")
       },
       success: (res) => {
         console.log(res.data.data.datas)
@@ -214,3 +221,39 @@ Page({
   },
 
 })
+
+function collectArticle(id){
+  var errorCode = -1
+  wx.request({
+    url: 'https://www.wanandroid.com/lg/collect/' + id+'/json',
+    method: "POST",
+    header: {
+      'content-type': 'application/json', // 默认值
+      'cookie': wx.getStorageSync("sessionid")
+    },
+    success: (res) => {
+      console.log("收藏：",res.data)
+      errorCode = res.data.errorCode
+    }
+  })
+
+  return errorCode
+}
+
+function unCollectArticle(id) {
+  var errorCode = -1
+  wx.request({
+    url: 'https://www.wanandroid.com/lg/uncollect_originId/'+id+'/json',
+    method: "POST",
+    header: {
+      'content-type': 'application/json', // 默认值
+      'cookie': wx.getStorageSync("sessionid")
+    },
+    success: (res) => {
+      console.log("取消收藏：", res.data)
+      errorCode = res.data.errorCode
+    }
+  })
+
+  return errorCode
+}

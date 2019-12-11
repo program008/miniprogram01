@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username:"登录",
+    username: "登录",
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -16,7 +16,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -44,8 +44,8 @@ Page({
       })
     }
   },
-  
-  getUserInfo: function (e) {
+
+  getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -53,24 +53,32 @@ Page({
       hasUserInfo: true
     })
   },
-  collectpage:function(){
+  collectpage: function() {
     console.log("打开我的收藏页")
     wx.navigateTo({
       url: '../collect/collect',
     })
   },
 
-  aboutpage:function(){
+  aboutpage: function() {
     console.log("打开关于我们页")
     wx.navigateTo({
       url: '../aboutwe/aboutwe',
     })
   },
-  login:function(){
+  login: function() {
     console.log("打开登录页")
     wx.navigateTo({
       url: '../login/login',
     })
 
+  },
+  onShow:function(){
+    var name = wx.getStorageSync("username")
+    if (name != null && name != "") {
+      this.setData({
+        username: name
+      })
+    }
   }
 })

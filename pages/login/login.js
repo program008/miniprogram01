@@ -98,6 +98,13 @@ Page({
       success(res) {
         console.log("请求成功1：", res.data)
         if (res.data.errorCode == 0) {
+          var cookie = res.header["Set-Cookie"];
+          if (cookie != null) {
+            wx.setStorageSync("sessionid", res.header["Set-Cookie"])
+            wx.setStorageSync("username", info.username)
+          }
+          console.log("cookie ", cookie)
+
           wx.hideLoading()
           wx.showToast({
             title: '登录成功',
