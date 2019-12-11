@@ -1,2 +1,22 @@
-<!--pages/knowledge/knowledge.wxml-->
-<text>pages/knowledge/knowledge.wxml</text>
+<wxs src="knowledge.wxs" module="util"></wxs>
+<view class="content">
+<view class="article-loading" wx:if="{{loading}}">
+    <image src="/assets/images/startup_load.gif"></image>
+  </view>
+  <view class="article_list">
+    <block wx:for="{{kdListDatas}}" wx:key="{{index}}">
+      <view class="content-item">
+        <view class="title">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="children">
+          <block wx:for="{{item.children}}" wx:key="{{index}}">
+            <view class="subname">
+            <text>{{item.name}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,1 +1,57 @@
-/* pages/knowledge/knowledge.wxss */
+.content{
+  background-color: #fafafa;
+}
+.content-item{
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 20rpx 20rpx;
+  padding: 20rpx 30rpx;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.title text{
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.subname{
+  border-color: #2196f3;
+  border-radius: 30rpx;
+  border-style: solid;
+  padding: 5rpx 20rpx;
+  margin: 10rpx 10rpx;
+  border-width: 2rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196f3;
+}
+.subname text{
+  font-size: 34rpx;
+  color: white;
+}
+
+.children{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.article-loading {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 180rpx;
+}
+
+.article-loading image {
+  width: 220rpx;
+  height: 220rpx;
+}
