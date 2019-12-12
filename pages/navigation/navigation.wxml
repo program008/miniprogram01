@@ -1,2 +1,25 @@
-<!--pages/navigation/navigation.wxml-->
-<text>pages/navigation/navigation.wxml</text>
+<view class="content">
+  <view class="left">
+    <scroll-view class='scroll_left' scroll-y="true" style="height: 100%" scroll-with-animation="true">
+      <block wx:for="{{category}}" wx:key="{{index}}">
+        <view class="tab {{curTab==index ? 'on' : ''}}" bindtap="bindLeftTab" data-index="{{index}}">
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="right">
+    <scroll-view class='scroll_right' scroll-y="true" style="height: 100%" scroll-with-animation="true" bindscrolltoupper="bindscrolltoupper" bindscrolltolower="bindscrolltolower">
+      <view class="childen">
+        <block wx:for="{{category[curTab].articles}}" wx:key="{{index}}">
+          <view class="subname" bindtap="todetail" data-index="{{index}}">
+            <text>{{item.title}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="article-loading" wx:if="{{loading}}">
+  <image src="/assets/images/startup_load.gif"></image>
+</view>

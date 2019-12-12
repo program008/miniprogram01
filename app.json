@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/navigation/navigation",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/knowledge/knowledge",
-    "pages/navigation/navigation",
+    
     "pages/project/project",
     "pages/webview/webview",
     "pages/user/user",
