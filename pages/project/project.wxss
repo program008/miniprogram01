@@ -1,1 +1,135 @@
-/* pages/project/project.wxss */
+.swiper-tab {
+  line-height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  height: 100rpx;
+}
+
+.scroll_w {
+  width: 100%;
+  height: 100rpx;
+  white-space: nowrap;
+}
+
+.scroll_h {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.tab-item {
+  flex: 1;
+  font-size: 30rpx;
+  display: inline-block;
+  color: #777;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.on {
+  color: #2196f3;
+  border-bottom: 5rpx solid #2196f3;
+  font-weight: bold;
+}
+
+.swiper {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  margin: 20rpx 20rpx;
+  padding: 30rpx 30rpx;
+  border-radius: 30rpx;
+}
+
+.item-left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-left image {
+  width: 160rpx;
+  height: 200rpx;
+}
+
+.item-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.one text {
+  font-size: 32rpx;
+  color: black;
+  display: block;
+  /* line-height: 40rpx;
+  height: 68rpx; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.top-author-image {
+  width: 64rpx;
+  height: 64rpx;
+  padding-right: 20rpx;
+}
+
+.two text {
+  font-size: 24rpx;
+  color: #c9c9c9;
+  /* 让文本自动换行 */
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-line;
+}
+.three{
+  margin-top: 20rpx;
+}
+.three text {
+  font-size: 24rpx;
+  color: #c9c9c9;
+}
+
+.article-loading {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.article-loading image {
+  width: 220rpx;
+  height: 220rpx;
+}

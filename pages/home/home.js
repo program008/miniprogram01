@@ -9,7 +9,7 @@ Page({
     articleList: [],
     indicatorDots: false,
     vertical: false,
-    autoplay: true,
+    autoplay: false,
     circular: true,
     interval: 2000,
     duration: 500,
@@ -19,6 +19,15 @@ Page({
     bottomLoading: false,
     loading: false,
     current:0,
+  },
+  //调转详情页
+  todetail: function (e) {
+    var index = e.currentTarget.dataset.curindex
+    console.log("e:", index)
+    var article = this.data.articleList[index]
+    wx.navigateTo({
+      url: '../webview/webview?link=' + article.link + '&title=' + article.title,
+    })
   },
   change:function(e){
     //console.log("e.detail.current：" + e.detail.current)

@@ -1,0 +1,7 @@
+//合并字段的名字
+var join = function (date,auther) {
+  return date+"  "+auther
+}
+module.exports = {
+  join: join
+}

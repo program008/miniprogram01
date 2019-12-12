@@ -1,2 +1,45 @@
-<!--pages/project/project.wxml-->
-<text>pages/project/project.wxml</text>
+<wxs src="project.wxs" module="util"></wxs>
+<view class="swiper-tab">
+  <scroll-view class='scroll_w' scroll-x="true" style="width: 100%" scroll-left="{{scrollLeft}}" scroll-with-animation="true">
+    <block wx:for="{{categorys}}" wx:key="{{index}}">
+      <view class="tab-item {{currentTab==index ? 'on' : ''}}" data-current="{{index}}" bindtap='topNavChange'>{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>
+ <view class="article-loading" wx:if="{{loading}}">
+    <image src="/assets/images/startup_load.gif"></image>
+  </view>
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{winHeight - 30}}px" bindchange="swiperChange">
+  <block wx:for="{{categorys}}" wx:key="{{index}}">
+    <swiper-item>
+      <scroll-view class='scroll_h' scroll-y="true" style="height: 100%" scroll-with-animation="true">
+        <view class="swiper-item" wx:if="{{currentTab == index}}">
+          <block wx:for="{{projects}}" wx:key="{{index}}">
+            <!-- 项目列表项 -->
+            <view class="project-item" bindtap="todetail" data-curindex="{{index}}">
+              <!-- 左边布局 -->
+              <view class="item-left">
+                <image src="{{item.envelopePic}}"></image>
+              </view>
+              <!-- 右边布局 -->
+              <view class="item-right">
+                <view class="one">
+                  <view class="top-author-image">
+                   <image src="/assets/images/icon_author.png" style="width: 68rpx;height:68rpx"></image>
+                  </view>
+                   <text>{{item.title}}</text>
+                </view>
+                <view class="two">
+                  <text>{{item.desc}}</text>
+                </view>
+                <view class="three">
+                  <text>{{util.join(item.niceShareDate,item.author)}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>

@@ -13,6 +13,9 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
+    wx.setNavigationBarTitle({
+      title: options.title
+    })
     this.setData({
       // imageUrl: options.imageUrl,
       //link: options.link
