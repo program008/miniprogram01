@@ -30,7 +30,16 @@ Page({
       }
     })
   },
-
+  todetail: function (e) {
+    var id = e.currentTarget.dataset.id
+    var name = e.currentTarget.dataset.name
+    console.log("id:",id)
+    console.log("name:", name)
+    //var article = this.data.category[this.data.curTab].articles[index]
+    wx.navigateTo({
+      url: '../kdetail/kdetail?id=' + id + '&name=' + name,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

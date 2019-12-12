@@ -11,7 +11,7 @@
         </view>
         <view class="children">
           <block wx:for="{{item.children}}" wx:key="{{index}}">
-            <view class="subname">
+            <view class="subname" bindtap="todetail" data-id="{{item.id}}" data-name="{{item.name}}">
             <text>{{item.name}}</text>
             </view>
           </block>

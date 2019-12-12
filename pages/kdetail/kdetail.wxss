@@ -1,0 +1,2 @@
+/* pages/kdetail/kdetail.wxss */
+@import '../home/home.wxss';
