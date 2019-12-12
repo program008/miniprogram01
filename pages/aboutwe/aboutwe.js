@@ -1,4 +1,6 @@
 // pages/aboutwe/aboutwe.js
+
+var local = require("../../assets/aboutwe.js")
 Page({
 
   /**
@@ -14,22 +16,25 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    var fileSystemManager = wx.getFileSystemManager()
+    that.setData({
+      aboutwe: local.introduce.content
+    })
+    // var fileSystemManager = wx.getFileSystemManager()
     // var filestr = fileSystemManager.readFileSync("/assets/aboutwe.txt", 'utf-8')
     // console.log(filestr)
-    fileSystemManager.readFile({
-      filePath:"/assets/aboutwe.txt",
-      encoding:"utf-8",
-      success: res=>{
-        console.log("文本信息：" + res.data)
-        that.setData({
-          aboutwe: res.data
-        })
-      },
-      fail: err=>{
-        console.log("读取文件失败：" + err.errMsg)
-      }
-    })
+    // fileSystemManager.readFile({
+    //   filePath:"/assets/aboutwe.json",
+    //   encoding:"utf-8",
+    //   success: res=>{
+    //     console.log("文本信息：" + res.data)
+    //     that.setData({
+    //       aboutwe: res.data
+    //     })
+    //   },
+    //   fail: err=>{
+    //     console.log("读取文件失败：" + err.errMsg)
+    //   }
+    // })
   },
 
   /**
