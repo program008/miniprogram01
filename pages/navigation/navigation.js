@@ -1,4 +1,5 @@
 // pages/navigation/navigation.js
+var app = getApp()
 Page({
 
   /**
@@ -8,7 +9,8 @@ Page({
     loading: true,
     category: [],
     curTab: 0,
-    temIndex:0
+    temIndex:0,
+    skinStyle: ""
   },
 
   /**
@@ -16,6 +18,7 @@ Page({
    */
   onLoad: function(options) {
     var that = this
+    
     //https://www.wanandroid.com/navi/json
     this.setData({
       loading: true
@@ -80,14 +83,43 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    var that = this
+    var skin = app.globalData.skin //"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
 
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    var that = this
+    var skin = app.globalData.skin //"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
   },
 
   /**

@@ -1,4 +1,5 @@
 // pages/project/project.js
+var app = getApp()
 Page({
 
   /**
@@ -12,6 +13,7 @@ Page({
     currentTab: 0,
     scrollLeft: 0,
     loading: false,
+    skinStyle: ""
   },
 
   /**
@@ -129,14 +131,44 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    var that = this
+    var skin = app.globalData.skin //"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
 
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    var that = this
+    var skin = app.globalData.skin.trim()//"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
 
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
   },
 
   /**

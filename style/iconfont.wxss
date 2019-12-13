@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont';  /* project id 1553994 */
-  src: url('//at.alicdn.com/t/font_1553994_yikfdfz4wb.eot');
-  src: url('//at.alicdn.com/t/font_1553994_yikfdfz4wb.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1553994_yikfdfz4wb.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1553994_yikfdfz4wb.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1553994_yikfdfz4wb.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1553994_yikfdfz4wb.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.eot');
+  src: url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -16,51 +16,74 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-01:before {
+  content: "\e604";
+}
+
+.icon-project:before {
+  content: "\e620";
+}
+
 .icon-wode:before {
   content: "\e629";
 }
 
-.icon-daohang:before {
-  content: "\e640";
+.icon-daohang1:before {
+  content: "\e614";
 }
 
 .icon-about:before {
   content: "\e86c";
 }
 
-.icon-xiangmu:before {
-  content: "\e611";
-}
-
 .icon-heart:before {
   content: "\e62a";
+}
+
+.icon-jiazaizhong:before {
+  content: "\e6ac";
+}
+
+.icon-yejianmoshi:before {
+  content: "\e6c1";
+}
+
+.icon-xiangmutixi:before {
+  content: "\e605";
 }
 
 .icon-zhishi:before {
   content: "\e61f";
 }
 
-.icon-shouye:before {
-  content: "\e86d";
+.icon-ico_meiyoushuju:before {
+  content: "\e602";
 }
 
-.icon-shouye-copy-copy:before {
-  content: "\e86e";
+.icon-tubiaozhizuomoban:before {
+  content: "\e618";
 }
 
 .icon-zhishi-copy:before {
   content: "\e86f";
 }
 
-.icon-xiangmu-copy:before {
-  content: "\e870";
-}
-
-.icon-daohang-copy:before {
-  content: "\e871";
-}
-
 .icon-wode-copy:before {
   content: "\e872";
 }
 
+.icon-01-copy:before {
+  content: "\e873";
+}
+
+.icon-xiangmutixi-copy:before {
+  content: "\e874";
+}
+
+.icon-daohang1-copy:before {
+  content: "\e875";
+}
+
+.icon-project-copy:before {
+  content: "\e876";
+}

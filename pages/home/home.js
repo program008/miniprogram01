@@ -1,4 +1,5 @@
 // pages/home/home.js
+var app = getApp()
 Page({
 
   /**
@@ -9,7 +10,7 @@ Page({
     articleList: [],
     indicatorDots: false,
     vertical: false,
-    autoplay: false,
+    autoplay: true,
     circular: true,
     interval: 2000,
     duration: 500,
@@ -19,6 +20,7 @@ Page({
     bottomLoading: false,
     loading: false,
     current:0,
+    skinStyle: ""
   },
   //调转详情页
   todetail: function (e) {
@@ -41,61 +43,6 @@ Page({
    */
   onLoad: function(options) {
     var that = this
-    //加载框
-    // wx.showLoading({
-    //   title: '加载中',
-    // })
-
-    //toast
-    // wx.showToast({
-    //   title: '加载成功',
-    // })
-
-    //显示对话框
-    // wx.showModal({
-    //   title: '提示',
-    //   content: '确定删除',
-    //   success(res) {
-    //     if (res.confirm) {
-    //       console.log('用户点击确定')
-    //     } else if (res.cancel) {
-    //       console.log('用户点击取消')
-    //     }
-    //   }
-    // })
-
-    //显示底部选择器
-    // wx.showActionSheet({
-    //   itemList: ['A', 'B', 'C'],
-    //   success(res) {
-    //     console.log(res.tapIndex)
-    //   },
-    //   fail(res) {
-    //     console.log(res.errMsg)
-    //   }
-    // })
-
-    //动态设置当前页面的标题
-    // wx.setNavigationBarTitle({
-    //   title: '当前页面'
-    // })
-
-    //在当前页面显示导航条加载动画
-    //wx.showNavigationBarLoading()
-
-    // wx.setNavigationBarColor({
-    //   frontColor: '#ffffff',
-    //   backgroundColor: '#ff0000',
-    //   animation: {
-    //     duration: 400,
-    //     timingFunc: 'easeIn'
-    //   }
-    // })
-
-    // wx.setBackgroundColor({
-    //   backgroundColorTop: '#ffffff', // 顶部窗口的背景色为白色
-    //   backgroundColorBottom: '#ffffff', // 底部窗口的背景色为白色
-    // })
     this.setData({
       loading: true
     })
@@ -136,14 +83,44 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
+    var that = this
+    var skin = app.globalData.skin //"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
 
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    var that = this
+    var skin = app.globalData.skin //"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
 
+    if(skin == "dark"){
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
   },
 
   /**

@@ -1,40 +1,40 @@
-<view class="page-body">
-  <view class="swiper">
+<view class="page-body {{skinStyle}}-box">
+  <view class="swiper {{skinStyle}}-box">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="change">
       <block wx:for="{{banners}}" wx:key="{{index}}">
         <swiper-item>
           <navigator url="/pages/webview/webview?link= {{item.url}}">
-            <view class="banner">
+            <view class="banner {{skinStyle}}-box">
               <image src="{{item.imagePath}}" />
             </view>
           </navigator>
         </swiper-item>
       </block>
     </swiper>
-    <view class="banner_title" wx:if="{{banners.length != 0}}">
+    <view class="banner_title {{skinStyle}}-box" wx:if="{{banners.length != 0}}">
       <text>{{banners[current].title}}</text>
       <text class="title_index">{{current}}/{{banners.length}}</text>
     </view>
   </view>
-  <view class="article-loading" wx:if="{{loading}}">
+  <view class="article-loading {{skinStyle}}-box" wx:if="{{loading}}">
     <image src="/assets/images/startup_load.gif"></image>
   </view>
-  <view class="article_list">
+  <view class="article_list {{skinStyle}}-box">
     <block wx:for="{{articleList}}" wx:key="{{index}}">
       <!-- <navigator url="/pages/webview/webview?link= {{item.link}}"> -->
-      <view class="content-item" bindtap="todetail" data-curindex="{{index}}">
-        <view class="content-image" bindtap="collect" data-index="{{index}}">
+      <view class="content-item {{skinStyle}}-box" bindtap="todetail" data-curindex="{{index}}">
+        <view class="content-image {{skinStyle}}-box" bindtap="collect" data-index="{{index}}">
           <image wx:if="{{item.collect}}" src="/assets/images/icon_like_article_selected.png"></image>
           <image wx:else src="/assets/images/icon_like_article_not_selected.png"></image>
         </view>
-        <view class="content-text">
-          <view class="content-top">
-            <view class="content-top-image">
+        <view class="content-text {{skinStyle}}-box">
+          <view class="content-top {{skinStyle}}-box">
+            <view class="content-top-image {{skinStyle}}-box">
               <image src="/assets/images/icon_author.png" style="width: 68rpx;height: 68rpx;"></image>
             </view>
-            <text class="title">{{item.title}}</text>
+            <text class="title {{skinStyle}}-box">{{item.title}}</text>
           </view>
-          <view class="content-bottom">
+          <view class="content-bottom {{skinStyle}}-box">
             <text>分类：{{item.chapterName}} </text>
             <text>时间：{{item.niceShareDate}}</text>
           </view>
@@ -43,8 +43,8 @@
       <!-- </navigator> -->
     </block>
   </view>
-  <view class="bottom">
-    <view wx:if="{{bottomLoading}}" class="bottom_loading">
+  <view class="bottom {{skinStyle}}-box">
+    <view wx:if="{{bottomLoading}}" class="bottom_loading {{skinStyle}}-box">
       <image src="/assets/images/loading_icon.gif"></image>
       <text>加载中...</text>
     </view>

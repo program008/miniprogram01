@@ -1,6 +1,6 @@
 // pages/user/user.js
 //获取应用实例
-const app = getApp()
+var app = getApp()
 Page({
 
   /**
@@ -10,13 +10,64 @@ Page({
     username: "登录",
     userInfo: {},
     hasUserInfo: false,
+    switchChecked:false,
+    skinStyle: "",
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  switchChange:function(e){
+    var value = e.detail.value
+    console.log("当前携带的value ",value)
+    var that = this
+    //设置全局变量
+    if (e.detail.value == true) {
+      app.globalData.skin = "dark"
+    } else {
+      app.globalData.skin = ""
+    }
+    //保存信息
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
 
+    //保存到本地
+    wx.setStorage({
+      key: "skin",
+      data: app.globalData.skin
+    })
+
+    //设置顶部的样式
+    if (value) {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+
+      wx.setTabBarStyle({
+        color: '#FF0000',
+        selectedColor: '#00FF00',
+        backgroundColor: '#0000FF',
+        borderStyle: 'white'
+      })
+    }else{
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#2196f3',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var that = this
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -44,7 +95,28 @@ Page({
       })
     }
   },
+  /**
+    * 生命周期函数--监听页面初次渲染完成
+    */
+  onReady: function () {
+    var that = this
+    var skin = app.globalData.skin //"dark"
+    that.setData({
+      skinStyle: app.globalData.skin,
+      switchChecked: true
+    })
 
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
+      })
+    }
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -78,6 +150,22 @@ Page({
     if (name != null && name != "") {
       this.setData({
         username: name
+      })
+    }
+    var that = this
+    var skin = app.globalData.skin.trim()//"dark"
+    that.setData({
+      skinStyle: app.globalData.skin
+    })
+
+    if (skin == "dark") {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff',
+        backgroundColor: '#000000',
+        animation: {
+          duration: 400,
+          timingFunc: 'easeIn'
+        }
       })
     }
   }

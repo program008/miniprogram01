@@ -1,4 +1,5 @@
 //app.js
+var app = getApp()
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -32,8 +33,17 @@ App({
         }
       }
     })
+    var that = this
+    wx.getStorage({
+      key: 'skin',
+      success: function (res) {
+        console.log("皮肤：",res.data)
+        that.globalData.skin = res.data
+      }
+    })
   },
   globalData: {
     userInfo: null
-  }
+  },
+
 })

@@ -13,8 +13,6 @@
     "pages/collect/collect",
     "pages/aboutwe/aboutwe",
     "pages/kdetail/kdetail"
-    
-
   ],
   "window": {
     "navigationBarTitleText": "WeChat",
