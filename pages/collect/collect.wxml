@@ -5,7 +5,7 @@
   <view class="article_list">
     <block wx:for="{{articleList}}" wx:key="{{index}}">
       <!-- <navigator url="/pages/webview/webview?link= {{item.link}}"> -->
-      <view class="content-item">
+      <view class="content-item" bindtap="todetail" data-curindex="{{index}}">
         <view class="content-image" bindtap="collect" data-index="{{index}}">
           <image wx:if="{{collect}}" src="/assets/images/icon_like_article_selected.png"></image>
           <image wx:else src="/assets/images/icon_like_article_not_selected.png"></image>

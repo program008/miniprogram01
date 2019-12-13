@@ -12,7 +12,15 @@ Page({
     collect:true,
     nulldata:false
   },
-
+  //调转详情页
+  todetail: function (e) {
+    var index = e.currentTarget.dataset.curindex
+    console.log("e:", index)
+    var article = this.data.articleList[index]
+    wx.navigateTo({
+      url: '../webview/webview?link=' + article.link + '&title=' + article.title,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
