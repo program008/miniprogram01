@@ -1,26 +1,40 @@
-// pages/webview/webview.js
+// pages/aboutwe/aboutwe.js
+
+var local = require("../../assets/aboutwe.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    link: ""
+    aboutwe: "",
+    appname:"miniprogram"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    wx.setNavigationBarTitle({
-      title: options.title
+    var that = this
+    that.setData({
+      aboutwe: local.introduce.content
     })
-    this.setData({
-      // imageUrl: options.imageUrl,
-      //link: options.link
-      link: options.link
-    })
+    // var fileSystemManager = wx.getFileSystemManager()
+    // var filestr = fileSystemManager.readFileSync("/assets/aboutwe.txt", 'utf-8')
+    // console.log(filestr)
+    // fileSystemManager.readFile({
+    //   filePath:"/assets/aboutwe.json",
+    //   encoding:"utf-8",
+    //   success: res=>{
+    //     console.log("文本信息：" + res.data)
+    //     that.setData({
+    //       aboutwe: res.data
+    //     })
+    //   },
+    //   fail: err=>{
+    //     console.log("读取文件失败：" + err.errMsg)
+    //   }
+    // })
   },
 
   /**
