@@ -1,40 +1,18 @@
-// pages/aboutwe/aboutwe.js
-
-var local = require("../../assets/aboutwe.js")
+// pages/splash/splash.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    aboutwe: "",
-    appname:"miniprogram"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    that.setData({
-      aboutwe: local.introduce.content
-    })
-    // var fileSystemManager = wx.getFileSystemManager()
-    // var filestr = fileSystemManager.readFileSync("/assets/aboutwe.txt", 'utf-8')
-    // console.log(filestr)
-    // fileSystemManager.readFile({
-    //   filePath:"/assets/aboutwe.json",
-    //   encoding:"utf-8",
-    //   success: res=>{
-    //     console.log("文本信息：" + res.data)
-    //     that.setData({
-    //       aboutwe: res.data
-    //     })
-    //   },
-    //   fail: err=>{
-    //     console.log("读取文件失败：" + err.errMsg)
-    //   }
-    // })
+
   },
 
   /**

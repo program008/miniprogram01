@@ -23,7 +23,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
 	"appid": "wx02892ee8c615145c",
-	"projectname": "newwanandroid",
+	"projectname": "douban",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
