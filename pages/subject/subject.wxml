@@ -1,2 +1,47 @@
 <!--pages/subject/subject.wxml-->
-<text>pages/subject/subject.wxml</text>
+<view class="content">
+  <!-- 顶部搜索栏 -->
+  <view class="top-search">
+    <view class="search">
+      <image src="../../assets/images/ic_search.png" class="search-icon"></image>
+      <text>这里有一张回到2000年的车票</text>
+      <image src="../../assets/images/ic_scan.png" class="scan_icon"></image>
+    </view>
+    <view class="top-mail">
+      <image src="../../assets/images/ic_mail.png"></image>
+    </view>
+  </view>
+  <!-- 主要内容 -->
+  <view class="subject-container">
+    <view class="subject-tab-bar">
+      <scroll-view class='scroll-top' scroll-x="true" style='width:100%;' scroll-with-animation="true">
+        <block wx:for="{{category}}" wx:key="{{index}}">
+          <view class="tab-item {{curTab==index ? 'on' : ''}}" bindtap="bindTopTab" data-index="{{index}}">
+            <text>{{item}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- 点击tab替换主体内容 -->
+    <view class="subject-content">
+      <view wx:if="{{curTab == 1}}">
+        <tv></tv>
+      </view>
+      <view wx:elif="{{curTab == 2}}">
+        <readbook></readbook>
+      </view>
+      <view wx:elif="{{curTab == 3}}">
+        <fiction></fiction>
+      </view>
+      <view wx:elif="{{curTab == 4}}">
+        <music></music>
+      </view>
+      <view wx:elif="{{curTab == 5}}">
+        <local></local>
+      </view>
+      <view wx:else>
+        <movie></movie>
+      </view>
+    </view>
+  </view>
+</view>

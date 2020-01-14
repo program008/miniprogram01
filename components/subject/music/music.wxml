@@ -1,0 +1,4 @@
+<!--pages/components/music/music.wxml-->
+<view class="content">
+  <text>pages/components/music/music.wxml</text>
+</view>

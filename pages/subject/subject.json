@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "movie":"/components/subject/movie/movie",
+    "tv": "/components/subject/tv/tv",
+    "readbook": "/components/subject/readbook/readbook",
+    "fiction": "/components/subject/fiction/fiction",
+    "music": "/components/subject/movie/movie",
+    "local": "/components/subject/local/local"
+  },
+  "navigationBarTitleText": "书影音"
 }

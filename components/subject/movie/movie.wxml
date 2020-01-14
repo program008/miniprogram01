@@ -1,0 +1,20 @@
+<!--pages/components/movie/movie.wxml-->
+<view class="content">
+  <view class="top-fun-btn">
+    <block wx:for="{{topbtndata}}" wx:key="item">
+      <view bindtap="bindTopTab" data-index="{{index}}">
+        <template is="top-button" data="{{item}}"></template>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 顶部功能按钮模板 -->
+<template name="top-button">
+  <view class="topbtn">
+    <image src="{{item.image}}"></image>
+    <view class="btn-title">
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</template>

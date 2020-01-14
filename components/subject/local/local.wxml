@@ -1,0 +1,4 @@
+<!--pages/components/local/local.wxml-->
+<view class="content">
+  <text>pages/components/local/local.wxml</text>
+</view>

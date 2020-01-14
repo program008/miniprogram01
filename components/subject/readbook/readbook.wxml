@@ -1,0 +1,4 @@
+<!--pages/components/readbook/readbook.wxml-->
+<view class="content">
+  <text>pages/components/readbook/readbook.wxml</text>
+</view>

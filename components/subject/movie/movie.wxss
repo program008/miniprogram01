@@ -1,0 +1,26 @@
+/* pages/components/movie/movie.wxss */
+
+.content {
+  width: 100%;
+  height: 100vh;
+}
+
+.top-fun-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20rpx;
+}
+.topbtn image {
+  width: 112rpx;
+  height: 112rpx;
+}
+
+.btn-title {
+  font-size: 24rpx;
+  color: #909090;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,4 @@
+<!--pages/components/fiction/fiction.wxml-->
+<view class="content">
+  <text>pages/components/fiction/fiction.wxml</text>
+</view>
