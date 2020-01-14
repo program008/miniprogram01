@@ -33,14 +33,6 @@ App({
         }
       }
     })
-    var that = this
-    wx.getStorage({
-      key: 'skin',
-      success: function (res) {
-        console.log("皮肤：",res.data)
-        that.globalData.skin = res.data
-      }
-    })
   },
   globalData: {
     userInfo: null

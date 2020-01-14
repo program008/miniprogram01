@@ -1,1 +1,53 @@
 /* pages/splash/splash.wxss */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top {
+  flex: 5;
+  width: 100vw;
+  background-color: gainsboro;
+}
+
+.bottom {
+  flex: 1;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 204rpx;
+  height: 90rpx;
+}
+
+.bottom text {
+  font-size: 38rpx;
+  padding-top: 15rpx;
+  color: #b2b2b2;
+  padding-left: 10rpx;
+}
+
+.btn-skip-ad {
+  width: 90rpx;
+  height: 50rpx;
+  background-color: gray;
+  font-size: 28rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 40rpx;
+  position: absolute;
+  right: 0;
+  margin-top: 40rpx;
+  margin-right: 20rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

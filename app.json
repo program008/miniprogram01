@@ -1,7 +1,12 @@
 {
   "pages": [
     "pages/splash/splash",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/subject/subject",
+    "pages/group/group",
+    "pages/shiji/shiji",
+    "pages/user/user"
+
   ],
   "window": {
     "navigationBarTitleText": "WeChat",
@@ -16,5 +21,43 @@
     "downloadFile": 20000
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#B2B2B2",
+    "selectedColor": "#42BD56",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/images/ic_tab_home_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_home_active.png"
+      },
+      {
+        "pagePath": "pages/subject/subject",
+        "text": "书影音",
+        "iconPath": "assets/images/ic_tab_subject_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_subject_active.png"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "text": "小组",
+        "iconPath": "assets/images/ic_tab_group_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_group_active.png"
+      },
+      {
+        "pagePath": "pages/shiji/shiji",
+        "text": "市集",
+        "iconPath": "assets/images/ic_tab_shiji_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_shiji_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "assets/images/ic_tab_profile_normal.png",
+        "selectedIconPath": "assets/images/ic_tab_profile_active.png"
+      }
+    ]
+  }
 }

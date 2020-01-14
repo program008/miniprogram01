@@ -1,2 +1,11 @@
-<!--pages/splash/splash.wxml-->
-<text>pages/splash/splash.wxml</text>
+<!-- <button bindtap="goHome">首页</button> -->
+<view class="content">
+  <view class="top">
+  <view class="btn-skip-ad" bindtap="goHome"><text>跳过 {{time}}</text></view>
+  </view>
+  <view class="bottom">
+    <image src="../../assets/images/ic_screen_shot_logo.png" class="logo"></image>
+    <text>1.0.0</text>
+  </view>
+</view>
+
