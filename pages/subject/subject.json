@@ -4,7 +4,7 @@
     "tv": "/components/subject/tv/tv",
     "readbook": "/components/subject/readbook/readbook",
     "fiction": "/components/subject/fiction/fiction",
-    "music": "/components/subject/movie/movie",
+    "music": "/components/subject/music/music",
     "local": "/components/subject/local/local"
   },
   "navigationBarTitleText": "书影音"

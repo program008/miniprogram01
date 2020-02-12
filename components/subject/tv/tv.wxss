@@ -1,6 +1,5 @@
 /* pages/components/tv/tv.wxss */
 .content{
   width: 100%;
-  height: 100vh;
   background-color: wheat;
 }
