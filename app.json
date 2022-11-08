@@ -66,5 +66,16 @@
         "selectedIconPath": "assets/images/icon_user_selected.png"
       }
     ]
+  },
+  "plugins": {
+    "weather":{
+      "version": "latest",
+      "provider": "wxc3db312ddf9bcb01"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   }
 }

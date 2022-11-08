@@ -1,6 +1,7 @@
 // pages/user/user.js
 //获取应用实例
 var app = getApp()
+var plugin = requirePlugin("weather");
 Page({
 
   /**
@@ -10,13 +11,14 @@ Page({
     username: "登录",
     userInfo: {},
     hasUserInfo: false,
-    switchChecked:false,
+    switchChecked: false,
     skinStyle: "",
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    today: {}
   },
-  switchChange:function(e){
+  switchChange: function (e) {
     var value = e.detail.value
-    console.log("当前携带的value ",value)
+    console.log("当前携带的value ", value)
     var that = this
     //设置全局变量
     if (e.detail.value == true) {
@@ -52,7 +54,7 @@ Page({
         backgroundColor: '#333333',
         borderStyle: 'white'
       })
-    }else{
+    } else {
       wx.setNavigationBarColor({
         frontColor: '#ffffff',
         backgroundColor: '#2196f3',
@@ -78,7 +80,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     var that = this
     if (app.globalData.userInfo) {
       this.setData({
@@ -106,6 +108,16 @@ Page({
         }
       })
     }
+
+    (async () => {
+      //天气
+      let { today1 } = await plugin.retrieveWeatherData()
+
+      this.setData({ 
+        today : today1
+       })
+    })();
+
   },
   /**
     * 生命周期函数--监听页面初次渲染完成
@@ -130,7 +142,7 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -138,27 +150,27 @@ Page({
       hasUserInfo: true
     })
   },
-  collectpage: function() {
+  collectpage: function () {
     console.log("打开我的收藏页")
     wx.navigateTo({
       url: '../collect/collect',
     })
   },
 
-  aboutpage: function() {
+  aboutpage: function () {
     console.log("打开关于我们页")
     wx.navigateTo({
       url: '../aboutwe/aboutwe',
     })
   },
-  login: function() {
+  login: function () {
     console.log("打开登录页")
     wx.navigateTo({
       url: '../login/login',
     })
 
   },
-  onShow:function(){
+  onShow: function () {
     var name = wx.getStorageSync("username")
     if (name != null && name != "") {
       this.setData({

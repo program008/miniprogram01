@@ -73,3 +73,16 @@
   right: 0;
   margin-right: 20rpx;
 }
+
+.weather{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:20rpx 20rpx;
+}
+
+.weather text{
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+}

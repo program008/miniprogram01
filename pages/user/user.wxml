@@ -21,7 +21,13 @@
   <view class="about {{skinStyle}}-box">
     <text class="iconfont icon-yejianmoshi" style='font-size:60rpx;color:#2196f3'></text>
     <text>夜间模式</text>
-    <switch checked="{{switchChecked}}" bindchange="switchChange" class="skin {{skinStyle}}-box" color="#2196f3"/>
+    <switch checked="{{switchChecked}}" bindchange="switchChange" class="skin {{skinStyle}}-box" color="#2196f3" />
   </view>
+  <view class="weather">
+    <navigator id="nav" url="plugin://weather/index">
+      <text>今日天气 {{today.area}} {{today.temperature}}℃</text>
+    </navigator>
+  </view>
+
 
 </view>
