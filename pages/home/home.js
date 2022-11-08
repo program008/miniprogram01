@@ -8,7 +8,7 @@ Page({
   data: {
     banners: [],
     articleList: [],
-    indicatorDots: false,
+    indicatorDots: true,
     vertical: false,
     autoplay: true,
     circular: true,

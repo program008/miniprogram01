@@ -113,9 +113,10 @@ Page({
   onReady: function () {
     var that = this
     var skin = app.globalData.skin //"dark"
+    console.log(`皮肤状态：${skin}`)
     that.setData({
       skinStyle: app.globalData.skin,
-      switchChecked: true
+      switchChecked: skin
     })
 
     if (skin == "dark") {

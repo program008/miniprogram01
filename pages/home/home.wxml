@@ -16,6 +16,8 @@
       <text class="title_index">{{current}}/{{banners.length}}</text>
     </view>
   </view>
+
+
   <view class="article-loading {{skinStyle}}-box" wx:if="{{loading}}">
     <image src="/assets/images/startup_load.gif"></image>
   </view>
@@ -43,6 +45,8 @@
       <!-- </navigator> -->
     </block>
   </view>
+
+  
   <view class="bottom {{skinStyle}}-box">
     <view wx:if="{{bottomLoading}}" class="bottom_loading {{skinStyle}}-box">
       <image src="/assets/images/loading_icon.gif"></image>
