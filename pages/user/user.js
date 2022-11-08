@@ -47,9 +47,9 @@ Page({
       })
 
       wx.setTabBarStyle({
-        color: '#FF0000',
-        selectedColor: '#00FF00',
-        backgroundColor: '#0000FF',
+        color: '#999999',
+        selectedColor: '#fff',
+        backgroundColor: '#333333',
         borderStyle: 'white'
       })
     }else{
@@ -61,7 +61,19 @@ Page({
           timingFunc: 'easeIn'
         }
       })
+
+      wx.setTabBarStyle({
+        color: '#CCCCCC',
+        selectedColor: '#2196f3',
+        backgroundColor: '#ffffff',
+        borderStyle: 'white'
+      })
     }
+
+    //切换完成皮肤，需要重启小程序
+    wx.switchTab({
+      url: '../../pages/user/user',
+    })
   },
   /**
    * 生命周期函数--监听页面加载

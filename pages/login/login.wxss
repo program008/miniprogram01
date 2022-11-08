@@ -19,7 +19,6 @@
 .username {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
 }
 
@@ -30,8 +29,10 @@
 }
 
 .username input {
-  border-bottom: gray solid 2rpx;
-  padding-bottom: 10rpx;
+  border: gray solid 2rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  border-color: #2196f3;
 }
 
 .username icon {
