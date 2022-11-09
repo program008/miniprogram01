@@ -29,5 +29,11 @@
     </navigator>
   </view>
 
+  <navigator id="nav" url="plugin://hello-plugin/calendar">
+  日历
+</navigator>
 
+<view>
+  checkInDate {{checkInDate}} ,checkOutDate {{checkOutDate}}
+</view>
 </view>

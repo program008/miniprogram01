@@ -1,5 +1,5 @@
 {
-  "entryPagePath": "pages/user/user",
+  "entryPagePath": "pages/home/home",
   "pages": [
     "pages/home/home",
     "pages/index/index",
@@ -71,6 +71,10 @@
     "weather":{
       "version": "latest",
       "provider": "wxc3db312ddf9bcb01"
+    },
+    "hello-plugin": {
+      "version": "1.0.3",
+      "provider": "wxb74cc18049128469"
     }
   },
   "permission": {

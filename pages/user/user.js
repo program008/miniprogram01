@@ -14,7 +14,9 @@ Page({
     switchChecked: false,
     skinStyle: "",
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    today: {}
+    today: {},
+    checkInDate:"",
+    checkOutDate:""
   },
   switchChange: function (e) {
     var value = e.detail.value
@@ -109,14 +111,14 @@ Page({
       })
     }
 
-    (async () => {
-      //天气
-      let { today1 } = await plugin.retrieveWeatherData()
+    // (async () => {
+    //   //天气
+    //   let { today1 } = await plugin.retrieveWeatherData()
 
-      this.setData({ 
-        today : today1
-       })
-    })();
+    //   this.setData({ 
+    //     today : today1
+    //    })
+    // })();
 
   },
   /**
@@ -141,6 +143,13 @@ Page({
         }
       })
     }
+
+    let getDate = wx.getStorageSync("ROOM_SOURCE_DATE");
+    console.log(`日期返回值：${getDate}`)
+    this.setData({
+      checkInDate: getDate.checkInDate,
+      checkOutDate: getDate.checkOutDate
+    })
   },
   getUserInfo: function (e) {
     console.log(e)

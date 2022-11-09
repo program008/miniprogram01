@@ -1,7 +1,7 @@
 <view class="page-body {{skinStyle}}-box">
   <view class="swiper {{skinStyle}}-box">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="change">
-      <block wx:for="{{banners}}" wx:key="{{index}}">
+      <block wx:for="{{banners}}" wx:key="index">
         <swiper-item>
           <navigator url="/pages/webview/webview?link= {{item.url}}">
             <view class="banner {{skinStyle}}-box">
@@ -22,7 +22,7 @@
     <image src="/assets/images/startup_load.gif"></image>
   </view>
   <view class="article_list {{skinStyle}}-box">
-    <block wx:for="{{articleList}}" wx:key="{{index}}">
+    <block wx:for="{{articleList}}" wx:key="index">
       <!-- <navigator url="/pages/webview/webview?link= {{item.link}}"> -->
       <view class="content-item {{skinStyle}}-box" bindtap="todetail" data-curindex="{{index}}">
         <view class="content-image {{skinStyle}}-box" bindtap="collect" data-index="{{index}}">
