@@ -1,6 +1,11 @@
 //app.js
 var app = getApp()
+var plugin = requirePlugin("weather");
 App({
+
+  getWeather:function(){
+    return plugin;
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -47,3 +52,9 @@ App({
   },
 
 })
+
+/**
+小程序名称 Enabot Robot
+小程序appid=wx8e2ea7a2bb6815c1
+小程序主体名称 赋之科技（深圳）有限公司
+ */

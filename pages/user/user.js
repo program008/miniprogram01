@@ -1,7 +1,6 @@
 // pages/user/user.js
 //获取应用实例
 var app = getApp()
-var plugin = requirePlugin("weather");
 Page({
 
   /**
@@ -111,14 +110,14 @@ Page({
       })
     }
 
-    // (async () => {
-    //   //天气
-    //   let { today1 } = await plugin.retrieveWeatherData()
+    (async () => {
+      //天气
+      let { today1 } = await app.getWeather().retrieveWeatherData()
 
-    //   this.setData({ 
-    //     today : today1
-    //    })
-    // })();
+      this.setData({ 
+        today : today1
+       })
+    })();
 
   },
   /**

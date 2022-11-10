@@ -26,7 +26,9 @@
   "appid": "wx02892ee8c615145c",
   "projectname": "newwanandroid",
   "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
+  "simulatorPluginLibVersion": {
+    "wmpf_simulator_plugin": "2.21.2"
+  },
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
