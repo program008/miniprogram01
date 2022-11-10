@@ -1,0 +1,27 @@
+{
+  "name": "miniprogram01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/program008/miniprogram01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/program008/miniprogram01/issues"
+  },
+  "homepage": "https://github.com/program008/miniprogram01#readme",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "weui-miniprogram": "^1.2.4"
+  }
+}

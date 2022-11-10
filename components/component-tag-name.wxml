@@ -1,0 +1,7 @@
+<!--components/component-tag-name.wxml-->
+<!-- 这是自定义组件的内部 WXML 结构 -->
+<slot name="before"></slot>
+<view class="inner">
+  {{innerText}}
+</view>
+<slot name="after"></slot>

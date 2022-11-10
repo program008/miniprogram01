@@ -1,5 +1,5 @@
 {
-  "entryPagePath": "pages/home/home",
+  "entryPagePath": "pages/weui/weui",
   "pages": [
     "pages/home/home",
     "pages/index/index",
@@ -13,7 +13,8 @@
     "pages/register/register",
     "pages/collect/collect",
     "pages/aboutwe/aboutwe",
-    "pages/kdetail/kdetail"
+    "pages/kdetail/kdetail",
+    "pages/weui/weui"
   ],
   "window": {
     "navigationBarTitleText": "WeChat",
@@ -68,7 +69,7 @@
     ]
   },
   "plugins": {
-    "weather":{
+    "weather": {
       "version": "latest",
       "provider": "wxc3db312ddf9bcb01"
     },
