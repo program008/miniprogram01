@@ -15,13 +15,19 @@
   },
   "keywords": [],
   "author": "",
+  "private": true,
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/program008/miniprogram01/issues"
   },
   "homepage": "https://github.com/program008/miniprogram01#readme",
   "dependencies": {
+    "@vant/weapp": "^1.10.6",
     "moment": "^2.29.4",
+    "vant-weapp": "^0.5.29",
     "weui-miniprogram": "^1.2.4"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.6.0"
   }
 }

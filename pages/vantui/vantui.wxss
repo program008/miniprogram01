@@ -1,0 +1,6 @@
+/* pages/vantui/vantui.wxss */
+.container {
+  padding: 20rpx;
+  height: 100vh;
+  background-color: rgb(233, 222, 222);
+}

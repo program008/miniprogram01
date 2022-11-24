@@ -1,9 +1,9 @@
 {
   "usingComponents": {
     "component-tag-name":"/components/component-tag-name",
-    "mp-dialog": "weui-miniprogram/dialog/dialog",
-    "mp-icon": "weui-miniprogram/icon/icon",
-    "mp-loading": "weui-miniprogram/loading/loading",
-    "mp-half-screen-dialog": "weui-miniprogram/half-screen-dialog/half-screen-dialog"
+    "mp-dialog": "../../miniprogram/miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "mp-icon": "../../miniprogram/miniprogram_npm/weui-miniprogram/icon/icon",
+    "mp-loading": "../../miniprogram/miniprogram_npm/weui-miniprogram/loading/loading",
+    "mp-half-screen-dialog": "../../miniprogram/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog"
   }
 }

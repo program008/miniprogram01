@@ -3,7 +3,7 @@ var app = getApp()
 var plugin = requirePlugin("weather");
 App({
 
-  getWeather:function(){
+  getWeather: function () {
     return plugin;
   },
   onLaunch: function () {
@@ -42,19 +42,31 @@ App({
     wx.getStorage({
       key: 'skin',
       success: function (res) {
-        console.log("皮肤：",res.data)
+        console.log("皮肤：", res.data)
         that.globalData.skin = res.data
       }
     })
   },
+  onShow: function () {
+    console.log("onshow")
+  },
+  onHide: function () {
+    console.log("onhide")
+  },
+  onError: function (error) {
+    console.log("error:", error)
+  },
+
+  onPageNotFound: function (res) {
+    console.log("onPageNotFound:", res)
+  },
   globalData: {
     userInfo: null
   },
-
+  onUnhandledRejection: function (res) {
+    console.log("onUnhandledRejection:", res)
+  },
+  onThemeChange: function (res) {
+    console.log("onThemeChange:", res)
+  }
 })
-
-/**
-小程序名称 Enabot Robot
-小程序appid=wx8e2ea7a2bb6815c1
-小程序主体名称 赋之科技（深圳）有限公司
- */
