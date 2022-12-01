@@ -1,6 +1,7 @@
 // pages/vantui/vantui.js
 var myBehavior = require('../../behavior/my-behavior.js')
 var common = require('../../utils/common.js')
+import Toast from '../../miniprogram/miniprogram_npm/@vant/weapp/toast/toast';
 Page({
 
   /**
@@ -8,7 +9,16 @@ Page({
    */
   behaviors: [myBehavior],
   data: {
-
+    show: false,
+    date:'',
+    checked:true,
+    activeIcon: '../../assets/images/icon_like_article_selected.png',
+    inactiveIcon: '../../assets/images/icon_like_article_not_selected.png',
+  },
+  onChange(event) {
+    this.setData({
+      checked: event.detail,
+    });
   },
   helloMINA: function () {
     common.sayHello('MINA')

@@ -179,6 +179,13 @@ Page({
 
   },
   onShow: function () {
+    let getDate = wx.getStorageSync("ROOM_SOURCE_DATE");
+    console.log("getDate",getDate)
+    this.setData({
+      checkInDate: getDate.checkInDate,
+      checkOutDate: getDate.checkOutDate
+    })
+
     var name = wx.getStorageSync("username")
     if (name != null && name != "") {
       this.setData({

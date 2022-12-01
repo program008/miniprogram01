@@ -1,6 +1,23 @@
 /* pages/vantui/vantui.wxss */
 .container {
-  padding: 20rpx;
+  padding: 20rpx 20rpx;
   height: 100vh;
   background-color: rgb(233, 222, 222);
 }
+progress {margin: 10px;}
+
+.van-button--primary {
+  color: var(--button-primary-color, #fff);
+  background: var(--button-primary-background-color, #07c160);
+  border: var(--button-border-width, 1px) solid var(
+      --button-primary-border-color,
+      #07c160
+    );
+}
+
+.image-container{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+

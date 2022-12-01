@@ -10,30 +10,30 @@
     </view>
   </view>
   <view class="collect {{skinStyle}}-box" bindtap="collectpage">
-    <text class="iconfont icon-heart" style='font-size:60rpx;color:#2196f3'></text>
+    <text class="iconfont icon-wodeshoucang" style='color:#2196f3'></text>
     <text>我的收藏</text>
   </view>
   <view class="about {{skinStyle}}-box" bindtap="aboutpage">
-    <text class="iconfont icon-about" style='font-size:60rpx;color:#2196f3'></text>
+    <text class="iconfont icon-guanyuwomen" style='color:#2196f3'></text>
     <text>关于我们</text>
   </view>
 
   <view class="about {{skinStyle}}-box">
-    <text class="iconfont icon-yejianmoshi" style='font-size:60rpx;color:#2196f3'></text>
+    <text class="iconfont icon-yejianmoshi" style='color:#2196f3'></text>
     <text>夜间模式</text>
     <switch checked="{{switchChecked}}" bindchange="switchChange" class="skin {{skinStyle}}-box" color="#2196f3" />
   </view>
   <view class="weather">
     <navigator id="nav" url="plugin://weather/index">
+      <text class="iconfont icon-tianqi1" style='font-size:28px;color:#ffffff;'></text>
       <text>今日天气 {{today.area}} {{today.temperature}}℃</text>
     </navigator>
   </view>
 
-  <navigator id="nav" url="plugin://hello-plugin/calendar">
-  日历
+  <navigator id="nav" url="plugin://hello-plugin/calendar" class="about {{skinStyle}}-box">
+  <text class="iconfont icon-rili" style='color:#2196f3'></text>
+  <text>日历</text>
+  <text> {{checkInDate}}  {{checkOutDate}} </text>
 </navigator>
 
-<view>
-  checkInDate {{checkInDate}} ,checkOutDate {{checkOutDate}}
-</view>
 </view>

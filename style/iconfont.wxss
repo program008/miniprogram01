@@ -1,89 +1,42 @@
 @font-face {
-  font-family: 'iconfont';  /* project id 1553994 */
-  src: url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.eot');
-  src: url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1553994_0xft4scnbvw.svg#iconfont') format('svg');
+  font-family: "iconfont"; /* Project id 3802330 */
+  src: url('//at.alicdn.com/t/c/font_3802330_e7fr7cgyxtf.woff2?t=1669866115890') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3802330_e7fr7cgyxtf.woff?t=1669866115890') format('woff'),
+       url('//at.alicdn.com/t/c/font_3802330_e7fr7cgyxtf.ttf?t=1669866115890') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 16px;
+  font-size: 26px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-01:before {
-  content: "\e604";
+.icon-tianqi1:before {
+  content: "\e694";
 }
 
-.icon-project:before {
-  content: "\e620";
-}
-
-.icon-wode:before {
-  content: "\e629";
-}
-
-.icon-daohang1:before {
-  content: "\e614";
-}
-
-.icon-about:before {
-  content: "\e86c";
-}
-
-.icon-heart:before {
-  content: "\e62a";
-}
-
-.icon-jiazaizhong:before {
-  content: "\e6ac";
+.icon-tianqi:before {
+  content: "\e663";
 }
 
 .icon-yejianmoshi:before {
-  content: "\e6c1";
+  content: "\e61c";
 }
 
-.icon-xiangmutixi:before {
-  content: "\e605";
+.icon-wodeshoucang:before {
+  content: "\e619";
 }
 
-.icon-zhishi:before {
-  content: "\e61f";
+.icon-guanyuwomen:before {
+  content: "\e654";
 }
 
-.icon-ico_meiyoushuju:before {
-  content: "\e602";
+.icon-rili:before {
+  content: "\e63f";
 }
 
-.icon-tubiaozhizuomoban:before {
-  content: "\e618";
-}
-
-.icon-zhishi-copy:before {
-  content: "\e86f";
-}
-
-.icon-wode-copy:before {
-  content: "\e872";
-}
-
-.icon-01-copy:before {
-  content: "\e873";
-}
-
-.icon-xiangmutixi-copy:before {
-  content: "\e874";
-}
-
-.icon-daohang1-copy:before {
-  content: "\e875";
-}
-
-.icon-project-copy:before {
-  content: "\e876";
+.icon-tianqi-:before {
+  content: "\ec65";
 }

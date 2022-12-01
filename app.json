@@ -1,5 +1,4 @@
 {
-  "entryPagePath": "pages/vantui/vantui",
   "pages": [
     "pages/home/home",
     "pages/index/index",
@@ -36,8 +35,7 @@
     "selectedColor": "#2196f3",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "assets/images/icon_home_pager_not_selected.png",
@@ -75,7 +73,7 @@
       "provider": "wxc3db312ddf9bcb01"
     },
     "hello-plugin": {
-      "version": "1.0.3",
+      "version": "latest",
       "provider": "wxb74cc18049128469"
     }
   },
@@ -83,5 +81,24 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
+  },
+  "usingComponents": {
+    "van-button": "miniprogram/miniprogram_npm/@vant/weapp/button/index",
+    "van-cell": "miniprogram/miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "miniprogram/miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-field": "miniprogram/miniprogram_npm/@vant/weapp/field/index",
+    "van-config-provider": "miniprogram/miniprogram_npm/@vant/weapp/config-provider/index",
+    "van-rate":"miniprogram/miniprogram_npm/@vant/weapp/rate/index",
+    "van-slider":"miniprogram/miniprogram_npm/@vant/weapp/slider/index",
+    "van-icon": "miniprogram/miniprogram_npm/@vant/weapp/icon/index",
+    "van-image": "miniprogram/miniprogram_npm/@vant/weapp/image/index",
+    "van-row": "miniprogram/miniprogram_npm/@vant/weapp/row/index",
+    "van-col": "miniprogram/miniprogram_npm/@vant/weapp/col/index",
+    "van-popup": "miniprogram/miniprogram_npm/@vant/weapp/popup/index",
+    "van-toast": "miniprogram/miniprogram_npm/@vant/weapp/toast/index",
+    "van-calendar": "miniprogram/miniprogram_npm/@vant/weapp/calendar/index",
+    "van-checkbox": "miniprogram/miniprogram_npm/@vant/weapp/checkbox/index",
+    "van-checkbox-group": "miniprogram/miniprogram_npm/@vant/weapp/checkbox-group/index",
+    "van-divider": "miniprogram/miniprogram_npm/@vant/weapp/divider/index"
   }
 }
