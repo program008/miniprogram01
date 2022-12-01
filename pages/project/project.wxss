@@ -41,6 +41,7 @@
   width: 100%;
   overflow: hidden;
   background-color: #f9f9f9;
+  padding-bottom: 16rpx;
 }
 
 .project-item {
@@ -109,6 +110,9 @@
 }
 .three{
   margin-top: 20rpx;
+  white-space: nowrap; 
+  text-overflow:ellipsis; 
+  overflow:hidden;
 }
 .three text {
   font-size: 24rpx;

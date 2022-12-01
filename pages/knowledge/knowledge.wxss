@@ -4,7 +4,9 @@
   background-color: #fafafa;
   padding-top: 20rpx;
 }
-
+.article_list{
+  padding: 16rpx 0;
+}
 .content-item {
   background-color: white;
   border-radius: 20rpx;

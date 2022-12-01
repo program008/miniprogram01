@@ -132,3 +132,11 @@ swiper {
   width: 220rpx;
   height: 220rpx;
 }
+
+.title{
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

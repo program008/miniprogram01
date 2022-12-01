@@ -31,7 +31,7 @@
   </view>
 
   <navigator id="nav" url="plugin://hello-plugin/calendar" class="about {{skinStyle}}-box">
-  <text class="iconfont icon-rili" style='color:#2196f3'></text>
+  <text class="iconfont icon-rili" style="color:#2196f3"></text>
   <text>日历</text>
   <text> {{checkInDate}}  {{checkOutDate}} </text>
 </navigator>

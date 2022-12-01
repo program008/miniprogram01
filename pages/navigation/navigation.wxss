@@ -1,4 +1,5 @@
 @import "../../skin/navigation.wxss";
+
 .content {
   display: flex;
   flex-direction: row;
@@ -15,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .article-loading image {
@@ -42,6 +43,7 @@
   flex-wrap: wrap;
   justify-content: start;
   align-content: flex-start;
+  padding: 16rpx 16rpx;
 }
 
 .scroll_left {
@@ -82,18 +84,16 @@
   border-color: #eee;
   border-radius: 30rpx;
   border-style: solid;
-  padding: 5rpx 20rpx;
+  padding: 5rpx 16rpx;
   margin: 10rpx 10rpx;
   border-width: 2rpx;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
   background-color: #eee;
-  height: 50rpx;
 }
 
 .subname text {
   font-size: 32rpx;
   color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
