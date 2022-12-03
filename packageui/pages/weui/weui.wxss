@@ -1,0 +1,6 @@
+/* pages/weui/weui.wxss */
+
+.loading{
+  left: 0;
+  right: 0;
+}

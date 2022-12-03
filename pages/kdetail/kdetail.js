@@ -20,7 +20,7 @@ Page({
     console.log("e:", index)
     var article = this.data.articleList[index]
     wx.navigateTo({
-      url: '../webview/webview?link=' + article.link + '&title=' + article.title,
+      url: '../../packagewebview/pages/webview/webview?link=' + article.link + '&title=' + article.title,
     })
   },
   change: function (e) {

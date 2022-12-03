@@ -60,7 +60,7 @@ Page({
     console.log("e:",index)
     var project = this.data.projects[index]
     wx.navigateTo({
-      url: '../webview/webview?link='+project.link+'&title='+project.title,
+      url: '../../packagewebview/pages/webview/webview?link='+project.link+'&title='+project.title,
     })
   },
 

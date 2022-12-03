@@ -38,7 +38,7 @@ Page({
     var index = e.currentTarget.dataset.index
     var article = this.data.category[this.data.curTab].articles[index]
     wx.navigateTo({
-      url: '../webview/webview?link=' + article.link + '&title=' + article.title,
+      url: '../../packagewebview/pages/webview/webview?link=' + article.link + '&title=' + article.title,
     })
   },
   bindLeftTab: function(e) {

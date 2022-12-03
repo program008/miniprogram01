@@ -1,20 +1,37 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/knowledge/knowledge",
     "pages/navigation/navigation",
     "pages/project/project",
-    "pages/webview/webview",
     "pages/user/user",
-    "pages/login/login",
-    "pages/register/register",
     "pages/collect/collect",
     "pages/aboutwe/aboutwe",
-    "pages/kdetail/kdetail",
-    "pages/weui/weui",
-    "pages/vantui/vantui"
+    "pages/kdetail/kdetail"
+  ],
+  "subpackages": [{
+      "root": "packagelogin",
+      "name": "login",
+      "pages": [
+        "pages/login/login",
+        "pages/register/register"
+      ]
+    },
+    {
+      "root": "packageui",
+      "name": "uistructure",
+      "pages": [
+        "pages/weui/weui",
+        "pages/vantui/vantui"
+      ]
+    },
+    {
+      "root": "packagewebview",
+      "name": "webview",
+      "pages": [
+        "pages/webview/webview"
+      ]
+    }
   ],
   "window": {
     "navigationBarTitleText": "WeChat",
@@ -88,8 +105,8 @@
     "van-cell-group": "miniprogram/miniprogram_npm/@vant/weapp/cell-group/index",
     "van-field": "miniprogram/miniprogram_npm/@vant/weapp/field/index",
     "van-config-provider": "miniprogram/miniprogram_npm/@vant/weapp/config-provider/index",
-    "van-rate":"miniprogram/miniprogram_npm/@vant/weapp/rate/index",
-    "van-slider":"miniprogram/miniprogram_npm/@vant/weapp/slider/index",
+    "van-rate": "miniprogram/miniprogram_npm/@vant/weapp/rate/index",
+    "van-slider": "miniprogram/miniprogram_npm/@vant/weapp/slider/index",
     "van-icon": "miniprogram/miniprogram_npm/@vant/weapp/icon/index",
     "van-image": "miniprogram/miniprogram_npm/@vant/weapp/image/index",
     "van-row": "miniprogram/miniprogram_npm/@vant/weapp/row/index",

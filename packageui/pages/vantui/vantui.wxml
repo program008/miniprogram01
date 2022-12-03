@@ -1,0 +1,15 @@
+<!--pages/vantui/vantui.wxml-->
+<view class="container">
+
+
+  <van-checkbox value="{{ checked }}" bind:change="onChange" use-icon-slot>
+    复选框
+    <image slot="icon" src="{{ checked ? activeIcon : inactiveIcon }}" style="width: 40rpx;height: 40rpx;" />
+  </van-checkbox>
+
+  <van-divider contentPosition="center" customStyle="color: #1989fa; border-color: #1989fa; font-size: 16px;">
+    文本
+  </van-divider>
+
+
+</view>

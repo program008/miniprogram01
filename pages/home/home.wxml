@@ -3,7 +3,7 @@
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="change">
       <block wx:for="{{banners}}" wx:key="index">
         <swiper-item>
-          <navigator url="/pages/webview/webview?link= {{item.url}}">
+          <navigator url="../../packagewebview/pages/webview/webview?link= {{item.url}}">
             <view class="banner {{skinStyle}}-box">
               <image src="{{item.imagePath}}" />
             </view>
