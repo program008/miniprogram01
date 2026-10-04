@@ -23,7 +23,7 @@
   "homepage": "https://github.com/program008/miniprogram01#readme",
   "dependencies": {
     "@vant/weapp": "^1.10.6",
-    "moment": "^2.29.4",
+    "moment": "^2.31.0",
     "vant-weapp": "^0.5.29",
     "weui-miniprogram": "^1.2.4"
   },
